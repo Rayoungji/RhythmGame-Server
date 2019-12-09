@@ -1,11 +1,10 @@
-package org.zerock.domain.dto;
+package org.zerock.domain.dto.User;
 
 public class UpdateDto {
 	
 	private String name;
 	private String id;
 	private String password;
-	private String age;
 	
 	public String getName() {
 		return name;
@@ -25,12 +24,4 @@ public class UpdateDto {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getAge() {
-		return age;
-	}
-	public void setAge(String age) {
-		this.age = age;
-	}
-	
-
 }

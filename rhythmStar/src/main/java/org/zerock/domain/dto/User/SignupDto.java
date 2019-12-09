@@ -1,4 +1,4 @@
-package org.zerock.domain.dto;
+package org.zerock.domain.dto.User;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -8,8 +8,6 @@ import lombok.Setter;
 public class SignupDto {
 
 	 private String name;
-	   private String age;
-	   private String sex;
 	   private String id;
 	   private String password;
 	   
@@ -18,18 +16,6 @@ public class SignupDto {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-	public String getAge() {
-		return age;
-	}
-	public void setAge(String age) {
-		this.age = age;
-	}
-	public String getSex() {
-		return sex;
-	}
-	public void setSex(String sex) {
-		this.sex = sex;
 	}
 	public String getId() {
 		return id;

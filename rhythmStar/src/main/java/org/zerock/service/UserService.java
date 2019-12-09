@@ -1,9 +1,9 @@
 package org.zerock.service;
 
 import org.springframework.stereotype.Service;
-import org.zerock.domain.dto.LoginDto;
-import org.zerock.domain.dto.SignupDto;
-import org.zerock.domain.dto.UpdateDto;
+import org.zerock.domain.dto.User.LoginDto;
+import org.zerock.domain.dto.User.SignupDto;
+import org.zerock.domain.dto.User.UpdateDto;
 import org.zerock.domain.entity.User;
 import org.zerock.repository.UserRepository;
 

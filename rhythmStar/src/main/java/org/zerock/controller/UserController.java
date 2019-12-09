@@ -4,9 +4,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import org.zerock.domain.dto.LoginDto;
-import org.zerock.domain.dto.SignupDto;
-import org.zerock.domain.dto.UpdateDto;
+import org.zerock.domain.dto.User.LoginDto;
+import org.zerock.domain.dto.User.SignupDto;
+import org.zerock.domain.dto.User.UpdateDto;
 import org.zerock.service.UserService;
 
 @RestController

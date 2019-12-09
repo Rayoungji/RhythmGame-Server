@@ -1,4 +1,4 @@
-package org.zerock.domain.dto;
+package org.zerock.domain.dto.User;
 
 import lombok.Getter;
 import lombok.Setter;
