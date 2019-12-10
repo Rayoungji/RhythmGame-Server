@@ -25,7 +25,7 @@ public class RankingController {
 		rankingService.recordScore(rankDto);
 	}
 	
-	//해당곡 랭킹 조회(점수 오름차순)
+	//해당곡 랭킹 조회(점수 내림차순)
 	@RequestMapping(value="/Ranking/{song}",method=RequestMethod.GET)
 	public List<RankDto> getRank(@PathVariable String song) {
 		return rankingService.getRank(song);
