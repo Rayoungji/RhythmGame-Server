@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.zerock.domain.dto.User.LoginDto;
+import org.zerock.domain.dto.User.LoginResponseDto;
 import org.zerock.domain.dto.User.SignupDto;
 import org.zerock.domain.dto.User.UpdateDto;
 import org.zerock.service.UserService;
@@ -33,7 +34,7 @@ public class UserController {
 	
 	//로그인
 	@RequestMapping(value="/User/Login", method=RequestMethod.POST)
-	public String Login(@RequestBody LoginDto login) {
+	public LoginResponseDto Login(@RequestBody LoginDto login) {
 	
 		return userservice.LoginUser(login);
 	}

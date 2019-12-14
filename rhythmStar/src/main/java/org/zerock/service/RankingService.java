@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 import org.zerock.domain.dto.Ranking.RankDto;
+import org.zerock.domain.dto.Ranking.RankListDto;
 import org.zerock.domain.entity.Ranking;
 import org.zerock.domain.entity.User;
 import org.zerock.repository.RankingRepository;
@@ -35,17 +36,15 @@ public class RankingService {
 	}
 	
 	//해당곡 랭킹 보여주기
-	public List<RankDto> getRank(String song){
+	public List<RankListDto> getRank(String song){
 		
 		List<Ranking> RankEntityList = rankingRepository.findBySongOrderByScoreDesc(song);
-		List<RankDto> RankList=new ArrayList<>();
+		List<RankListDto> RankList=new ArrayList<>();
 		
 		for(int i=0; i<RankEntityList.size(); i++) {
-			RankDto rank=new RankDto();
-			rank.setSong(RankEntityList.get(i).getSong());
+			RankListDto rank=new RankListDto();
 			rank.setId(RankEntityList.get(i).getUser().getId());
 			rank.setScore(RankEntityList.get(i).getScore());
-			
 			RankList.add(rank);
 		}
 		

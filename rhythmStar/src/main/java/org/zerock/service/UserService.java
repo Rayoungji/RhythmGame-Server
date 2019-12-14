@@ -2,6 +2,7 @@ package org.zerock.service;
 
 import org.springframework.stereotype.Service;
 import org.zerock.domain.dto.User.LoginDto;
+import org.zerock.domain.dto.User.LoginResponseDto;
 import org.zerock.domain.dto.User.SignupDto;
 import org.zerock.domain.dto.User.UpdateDto;
 import org.zerock.domain.entity.User;
@@ -45,18 +46,25 @@ public class UserService {
 	  }
 	  
 	  //로그인
-	  public String LoginUser (LoginDto login) {
+	  public LoginResponseDto LoginUser (LoginDto login) {
 		  
 		 User user=userRepository.findById(login.getId());
+		 LoginResponseDto loginmsg=new LoginResponseDto();
 		 
 		 //회원가입이 안되어있을때 
 		 if(user==null) {
-			 return "dont have id";
+			 String response= "dont have id";
+			 loginmsg.setMsg(response);
+			 return loginmsg;
 			 }
 		 else if(!user.getPassword().equals(login.getPassword())) {
-			 return "password is wrong";
+			 String response= "password is wrong";
+			 loginmsg.setMsg(response);
+			 return loginmsg;
 		 }
-		 return "loging success";
+		 String response ="loging success";
+		 loginmsg.setMsg(response);
+		 return loginmsg;
 	}
 	  
 }

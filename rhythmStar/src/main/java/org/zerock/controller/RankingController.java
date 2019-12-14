@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.zerock.domain.dto.Ranking.RankDto;
+import org.zerock.domain.dto.Ranking.RankListDto;
 import org.zerock.service.RankingService;
 
 @RestController
@@ -27,7 +28,7 @@ public class RankingController {
 	
 	//해당곡 랭킹 조회(점수 내림차순)
 	@RequestMapping(value="/Ranking/{song}",method=RequestMethod.GET)
-	public List<RankDto> getRank(@PathVariable String song) {
+	public List<RankListDto> getRank(@PathVariable String song) {
 		return rankingService.getRank(song);
 	}
 
